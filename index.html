@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>A sua altura é a média de qual país?</title>
+    </head>
+    <body class="gradient">
+        <main>
+            <h1>A sua altura é a média de qual país?</h1>
+            <div class="sex">
+                <p>Qual o seu sexo?
+                    <select>
+                        <option value="" data-default disabled selected></option>
+                        <option value="altura_masculina">masculino</option>
+                        <option value="altura_feminina">feminino</option>
+                    </select>
+                </p>
+            </div>
+            <div class = "height">
+                <p>
+                    Qual é a sua altura? (ex: 1.76)
+                    <input type="number" min="0" max="2.50" onchange=mostraDiv()>
+                </p>
+            </div>
+            <button>LIMPAR</button>
+            <div class = "answer mostra-div">
+                <p>Você mede <b><output value="altura-resposta"></output> 
+                    m</b>, a altura média destes países:</p>
+                <div id="flags"></div>
+                <p id="compare">
+                    <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/240/apple/325/flag-brazil_1f1e7-1f1f7.png" title="Brasil">
+                    No Brasil, você é <output value="altura-compara"></output> a <b>média <output value="genero"></output></b>, que é de <b><output value="altura"></output> m</b>.</p>
+            </div>
+            <div class="histogram mostra-div">
+                <b><p class="gender"></p></b>
+                <div class = "flags-list">
+
+                </div>
+            </div>
+            <footer>
+                <b>Fonte:</b> <a href="https://www.worlddata.info/average-bodyheight.php#by-population ">WorldData</a>
+            </footer>
+        </main>
+        <script src='script.js'></script>
+    </body>
+</html>
